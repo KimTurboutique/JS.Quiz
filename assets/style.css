@@ -1,0 +1,16 @@
+/* html,
+body, {
+
+
+} */
+
+/* make  header a link to view high scores */
+header {
+ text-align: left;
+ color: purple;
+}
+
+
+main {
+ text-align: center;
+}
