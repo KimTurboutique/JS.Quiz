@@ -9,8 +9,26 @@ header {
  text-align: left;
  color: purple;
 }
+.timer{
+    text-align: right;
+}
 
-
+a {
+    text-decoration: none;
+}
 main {
  text-align: center;
+}
+#start-btn{
+    background-color: greenyellow;
+}
+
+.hide {
+    display:none;
+}
+
+#answers{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
 }

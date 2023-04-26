@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <a href="./highScores.html">
+        <header>
+            <h3>View high scores</h3>
+        </header>
+    </a>
+    <main>
+        <div id="startScreen">
+            <h1>Coding Challenge Quiz</h1>
+            <!-- add text style to p-->
+            <p>Try to answer the following code-related questions within the time-limit.
+                Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h3> Timer: <span id="time"> </span> </h3>
+            <h2 id="question-title"> </h2>
+            <div id="answers"> </div>
+        </div>
+        <div id="endQuiz" class="hide">
+            <h2> Your score is <span id="score"> </span></h2>
+            <p> Enter your intials to save your score </p>
+            <input type="text"><button> Save </button>
+        </div>
+
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
