@@ -34,12 +34,13 @@ var questions = [
     },
 ];
 
-// general
+// global variables
 
 var timeInterval;
-var counter = 60;
+var counter = 75;
 var timeEl = document.getElementById("time");
 var currentIndex = 0;
+var scoreEl = 0;
 
 // step 1. start timer when user clicks start button
 
@@ -71,12 +72,13 @@ function displayQuestions() {
     for (var i = 0; i < questions[currentIndex].choices.length; i++) {
         var btn = document.createElement("button")
         btn.textContent = questions[currentIndex].choices[i]
-        btn.onclick = checkAnswer
+        btn.addEventListener("click", checkAnswer);
         document.getElementById("answers").append(btn)
     }
 }
 
 // step 3. display answers and deduct 10 secs if user gets answer incorrect
+
 function checkAnswer(event) {
     if (event.target.textContent === questions[currentIndex].answer) {
 
@@ -85,13 +87,34 @@ function checkAnswer(event) {
         counter -= 10
         timeEl.textContent = counter
     }
-}
-    
-// step 4. end quiz
+    if (currentIndex === 4) {
+        endQuiz()
+    }
+// Step 4. go to next question
 
-    function endQuiz() {
-        clearInterval(timeInterval)
+    else {
+        currentIndex++
+        displayQuestions()
     }
 
-    var buttonElement = document.querySelector("#start-btn");
-    buttonElement.addEventListener("click", startQuiz);
+}
+
+
+//step 5. end quiz
+
+function endQuiz() {
+    clearInterval(timeInterval)
+    document.getElementById("endQuiz").classList.remove("hide")
+    document.getElementById("questions").classList.add("hide")
+}
+
+var buttonElement = document.querySelector("#start-btn");
+buttonElement.addEventListener("click", startQuiz);
+
+// step 6. show final score and box for user to input initials and save scores
+
+function finalScore() {
+
+}
+
+// step 7. 

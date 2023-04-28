@@ -18,7 +18,13 @@ a {
 }
 main {
  text-align: center;
+ border: 5px;
+ border-style: groove;
+ border-color: blueviolet;
+ margin: 15%;
+ padding: 10%;
 }
+
 #start-btn{
     background-color: greenyellow;
 }
@@ -31,4 +37,9 @@ main {
     display: flex;
     flex-direction: column;
     width: 25%;
+    margin: auto;
+}
+
+#save-btn{
+    background-color: greenyellow;
 }
