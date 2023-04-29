@@ -5,6 +5,7 @@ This JavaScriot Game project was done for the Boot Camp Week 4 Challenge. I util
 ### Webpage URL: ()
 
 ### Webpage screenshots:
+<img width="1434" alt="Screenshot 2023-04-28 at 10 22 43 PM" src="https://user-images.githubusercontent.com/127644189/235279346-2490941b-26d3-405d-b38b-c21aba45e200.png">
 
 
 ### References and Tools are as follows:
