@@ -40,7 +40,6 @@ var timeInterval;
 var counter = 75;
 var timeEl = document.getElementById("time");
 var currentIndex = 0;
-var scoreEl = 0;
 
 // step 1. start timer when user clicks start button
 
@@ -113,7 +112,7 @@ buttonElement.addEventListener("click", startQuiz);
 
 // step 6. show final score and box for user to input initials and save scores
 
-function finalScore() {
+function score() {
 
 }
 
