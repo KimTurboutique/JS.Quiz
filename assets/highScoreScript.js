@@ -2,7 +2,10 @@
 
 // ===============================
 
-var pTag = document.getElementById("text");
+var input = document.getElementById("text");
 var highscore = localStorage.getItem("highscore");
 
-pTag.textContent = highscore;
+input.textContent = highscore;
+document.getElementById("highscore").classList.remove("hide");
+
+// display high scores^^^^

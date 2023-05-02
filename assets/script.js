@@ -106,11 +106,9 @@ function endQuiz() {
     document.getElementById("endQuiz").classList.remove("hide")
     document.getElementById("questions").classList.add("hide")
 // step 6. display final score and box for user to input initials and save scores
-    document.getElementById("score").innerHTML = counter;
-// step 7. show restart game button
-    document.getElementById("restart-btn").classList.remove("hide")
+    document.getElementById("highscore").innerHTML = counter;
 }
-
+// step 7. save scores and show all high scores when "view high score" is clicked
 var buttonElement = document.querySelector("#start-btn");
 buttonElement.addEventListener("click", startQuiz);
 
