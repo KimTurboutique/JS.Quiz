@@ -1,10 +1,5 @@
-/* html,
-body, {
-
-
-} */
-
 /* make  header a link to view high scores */
+
 header {
  text-align: left;
  color: purple;
@@ -40,6 +35,6 @@ main {
     margin: auto;
 }
 
-#save-btn{
+#saveButton{
     background-color: greenyellow;
 }

@@ -41,6 +41,7 @@ var counter = 75;
 var timeEl = document.getElementById("time");
 var currentIndex = 0;
 var scoreEl = document.getElementById("time");
+var saveButtonEl = document.getElementById("saveButton");
 
 // step 1. start timer when user clicks start button
 
@@ -112,3 +113,7 @@ function endQuiz() {
 
 var buttonElement = document.querySelector("#start-btn");
 buttonElement.addEventListener("click", startQuiz);
+
+saveButtonEl.addEventListener("click", function () {
+    localStorage.setItem("highscore", counter);
+});
