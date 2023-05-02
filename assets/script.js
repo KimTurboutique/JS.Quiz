@@ -40,6 +40,7 @@ var timeInterval;
 var counter = 75;
 var timeEl = document.getElementById("time");
 var currentIndex = 0;
+var scoreEl = document.getElementById("time");
 
 // step 1. start timer when user clicks start button
 
@@ -54,8 +55,6 @@ function startTimer() {
     }, 1000)
 
 }
-
-
 // Step 2. start quiz and display questions
 
 function startQuiz() {
@@ -105,15 +104,11 @@ function endQuiz() {
     clearInterval(timeInterval)
     document.getElementById("endQuiz").classList.remove("hide")
     document.getElementById("questions").classList.add("hide")
+// step 6. display final score and box for user to input initials and save scores
+    document.getElementById("score").innerHTML = counter;
+// step 7. show restart game button
+    document.getElementById("restart-btn").classList.remove("hide")
 }
 
 var buttonElement = document.querySelector("#start-btn");
 buttonElement.addEventListener("click", startQuiz);
-
-// step 6. show final score and box for user to input initials and save scores
-
-function score() {
-
-}
-
-// step 7. 
