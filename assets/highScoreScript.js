@@ -2,10 +2,14 @@
 
 // ===============================
 
-var input = document.getElementById("text");
-var highscore = localStorage.getItem("highscore");
-
-input.textContent = highscore;
-document.getElementById("highscore").classList.remove("hide");
+let highScores= JSON.parse(localStorage.getItem("highscore"))||[];
+highScores.sort(function(a,b){
+    return b.score-a.score
+})
+for (i=0; i<highScores.length; i++){
+let liEl=document.createElement("li");
+liEl.textContent=highScores[i].initials+" - "+highScores[i].score
+document.querySelector("ol").appendChild(liEl)
+}
 
 // display high scores^^^^

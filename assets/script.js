@@ -113,5 +113,12 @@ var buttonElement = document.querySelector("#start-btn");
 buttonElement.addEventListener("click", startQuiz);
 
 saveButtonEl.addEventListener("click", function () {
-    localStorage.setItem("highscore", counter);
+    let initials= document.querySelector("input").value;
+    let highScores= JSON.parse(localStorage.getItem("highscore"))||[];
+    console.log(initials);
+    let newScore= {
+        initials:initials,score:counter
+    }
+    highScores.push(newScore)
+    localStorage.setItem("highscore",JSON.stringify(highScores))
 });
